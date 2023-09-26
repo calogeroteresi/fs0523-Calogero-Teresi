@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Primi passi operativi per creare un modello di pagina html per un post.
+     Scopri come iniziare in modo facile">
+    <title>Blog Epicode</title>
+    <style>
+        table, th, td {
+          border: 1px solid red;
+          border-collapse: collapse;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <hgroup> 
+            <h1>Epicode - Il blog dei developers</h1>
+            <img src="img/logo.svg" alt ="logo epicode">
+        </hgroup>
+        <nav> 
+            <a href="index.html">Home</a> |
+            <a href="">Articoli</a> |
+            <a href="">Lavora con noi</a> 
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <div>
+            <h2>Come creare un template per i post</h2>
+                <p>La prima cosa da fare è suddividere in blocchi logici la pagina,
+                     identificando le parti comuni da applicare a tutte 
+                     le pagine
+                 </p>
+        </div>
+        <div>
+            <p>Le varie aree saranno quindi suddivise in:</p>
+                <ul>
+                    <li>Contenuti di intestazione del tag &nbsp &#60 header &#62</li>
+                    <li>Contenuti centrali variabili del tag &nbsp &#60 main &#62</li>
+                    <li>Contenuti di fine pagina comuni, da inserire nel tag &nbsp &#60 footer &#62</li>
+                </ul>
+        </div>
+        <div>
+            <h3>Formatazzione del codice</h3>
+                <p>
+                    Il testo dell'articolo dovrà essere formattato per identificare 
+                     tutte le parti da selezionare con i Css. Perciò i passi saranno:
+                </p>
+                    <ol>
+                        <li>Progettare il markup assegnando ad ogni specifico testo il tag appropriato</li>
+                        <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso </li>
+                        <li>Applicare gli stili CSS</li>
+                    </ol>
+                    <hr>
+                <p>
+                    L'applicazione di stili CSS è cresciuta negli anni fino a 
+                    raggiungere la diffusione pressoché totale.
+                </p>
+        </div>
+        <div>
+            <table style="background-color:beige">
+                <caption>Diffusione dei CSS</caption>
+                    <tr></tr>
+                        <th>Anno</th>
+                        <th>% di utilizzo</th>
+                        <th>Supporto browsers</th>
+                    <tr></tr>
+                        <th>2000</th>
+                        <th>20%</th>
+                        <th>35%</th>
+                    <tr></tr>
+                        <th>2002</th>
+                        <th>35%</th>
+                         <th>22%</th>
+                    <tr></tr>
+                         <th>2004</th>
+                         <th>45%</th>
+                         <th>42%</th>
+                    <tr></tr>
+                        <th>2008</th>
+                         <th>80%</th>
+                        <th>51%</th>
+                    <tr></tr>
+                        <th>2012</th>
+                        <th>100%</th>
+                        <th>76%</th>
+            </table>
+        </div>
+        <div>
+            <p>Un test di validazione potra essere fatto tramite il 
+                <Span><a href="https://jigsaw.w3.org/css-validator/">tool online</a></Span>
+                dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro
+                obiettivo ed essere stati dei veri developers come loro:
+            </p>
+            <video>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ek40kaV9IZY?si=YKp94UnJv_qOz1zH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+            </video>
+        </div>
+    </main>
+<footer>
+   <div>
+     <p> Vuoi rimanere aggiornato su altre novita del blog? Iscriviti alla newsletter</p>
+    <form action ="https://epicode.com/it/candidati/">
+        <label for="email">Inserisci l'email</label>
+        <imput type="email" id="email" name="email">
+            <imput type="submit" value="Iscriviti!">
+                <!--Codice sembra corretto ma sicuro sfugge qualcosa-->
+            </form>
+            <hr>
+     </div>
+     <div>
+        <p>Articoli correlati</p>
+        <p>Validare il codice Html</p>
+        <p>Categoria:develop</p>
+        <p>Data: 18-09-2020</p>
+            <hr>
+        <p>Corregere la sintassi</p>
+        <p>Categoria: develop</p>
+        <p>Data: 16-09-2020</p>
+            <hr>
+        <p>Meno kb nella pagina</p>
+        <p>Categoria:ottimazione</p>
+        <p>Data: 30-09-2020</p>
+     </div>
+
+</footer>   
+
+
+
+
+
+
+
+
+
+</body>
+</html>
