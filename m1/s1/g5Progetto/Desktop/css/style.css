@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+:root{
+     --colorefont: #393d41;
+     --coloreheadings: #25a2c3;
+     --colorefooter: #c8e7f0;
+}
+* {box-sizing:border-box;
+     font-family: 'Open Sans', sans-serif;
+}
+a {text-decoration: none;}
+body {
+     font-size: 1.2rem;
+     line-height: 1.65;
+     font-family: 'Open Sans', sans-serif;
+     text-align: center;
+     background-color: white;
+     color: var(--colorefont);
+}
+header{
+     background-color: black;
+     margin:0;
+     text-align:left;
+     }
+          
+     h3, h1, .articolo a, footer{
+     color: var(--coloreheadings);
+     font-family: 'Montserrat', sans-serif;
+     }
+
+     .partiamo {
+     display: block;
+     height:400px;
+     background-image: url(../../Immagini/banner.jpg);
+     background-size: contain;
+     background-attachment: fixed;
+    }
+     
+    .pigiare{
+     background-color: #e22d0e;
+     width:30%;
+     height: 50px;
+     margin-bottom: 300px;
+     margin-block-start: 50px;
+     margin-left: 400px;
+    }
+
+    .flexbox {
+     display:flex;
+     flex-direction: row;
+     flex-flow:row wrap;
+     justify-content: center;
+     
+    }
+     .spiegazione{
+          margin-top: 130px;
+
+    }
+     .image img{
+          border-radius: 130%;
+          border-width: 0;
+          margin:30px;
+     }
+     .banner{
+     background-color: #e22d0e;
+     padding:5px 15px 5px 15px;
+     height:300px;
+     }
+
+     .articolo {
+          height: 400px;
+          width: 400px;
+          margin: 30px;
+          border-color:#dee1e3;
+          border-width: 0.1rem;
+          border-style: solid;
+          border-radius: 2%;
+     }
+     .articolo img{
+          max-width: 100%;
+          max-height: 100%;
+     }
+
+     .cont {
+          padding:150px 10px 100px 150px;
+     }
+     footer, footer a{
+          background-color: #25a2c3;
+     }
+     .pigiare a, .banner, footer a,h2{
+          color:white;
+     }
+    
