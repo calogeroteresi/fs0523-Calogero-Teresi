@@ -20,73 +20,149 @@ header{
      background-color: black;
      margin:0;
      text-align:left;
+     height:100px;
      }
           
-     h3, h1, .articolo a, footer{
+     header div{
+          padding:20px 0;
+
+
+     }
+     h3, .titolo, .articolo a, footer{
      color: var(--coloreheadings);
      font-family: 'Montserrat', sans-serif;
      }
 
      .partiamo {
-     display: block;
-     height:400px;
-     background-image: url(../../Immagini/banner.jpg);
-     background-size: contain;
-     background-attachment: fixed;
-    }
+          display: block;
+          height:400px;
+          background-image: url(../../Immagini/banner.jpg);
+          background-size: contain;
+          background-attachment: fixed;
+          padding: 100px;
+         }
      
-    .pigiare{
-     background-color: #e22d0e;
-     width:30%;
-     height: 50px;
-     margin-bottom: 300px;
-     margin-block-start: 50px;
-     margin-left: 400px;
-    }
+     .partiamo p{
+          width:600px;
+          margin:auto;
+     }    
+
+     .titolo{
+               margin-bottom: 50px;
+               font-size: 3rem;
+               line-height: 1;
+     }
+          
+          
+     #bottone {
+               background-color: #f04c2f  ;
+               padding: 12px 30px;
+               font-family: 'Montserrat', sans-serif;
+               font-size:medium;
+               border-style: none;
+               border-radius: 10%;
+               margin-top: 30px;
+          }
+
 
     .flexbox {
      display:flex;
      flex-direction: row;
      flex-flow:row wrap;
      justify-content: center;
-     
+     padding:0;
+     margin:0;
     }
-     .spiegazione{
-          margin-top: 130px;
-
+    .image {
+         flex:1;
+         width: 50%;
+         margin: 200px 50px 200px 200px;
     }
      .image img{
-          border-radius: 130%;
-          border-width: 0;
-          margin:30px;
+          border-radius: 100%;
+          width:100%;
      }
-     .banner{
-     background-color: #e22d0e;
-     padding:5px 15px 5px 15px;
-     height:300px;
+     .spiegazione {
+          flex:1;
+          width:80%;
+          height:100%;
+          margin: 200px 0px 200px 10px;
+          padding-right: 200px;
+          text-align:left;
+     }
+     .spiegazione h3{
+          margin-top: 30px;
+          margin-bottom: 10px;
+           
+     }
+          .banner{
+               background-color: #e22d0e;
+               padding:50px 40px;
+               height:350px;
+          }
+          
+          .hbanner{ 
+               font-size: 2.5rem;
+               font-family: 'Montserrat', sans-serif;
+      
+          }
+          .citazione {
+               margin: 30px 0;
+               font-style: italic;
+          }
+
+
+     .aside {
+          padding: 100px;
      }
 
-     .articolo {
-          height: 400px;
-          width: 400px;
-          margin: 30px;
-          border-color:#dee1e3;
-          border-width: 0.1rem;
+
+     .articolo{
+          flex:2;
+          margin: 20px;
           border-style: solid;
-          border-radius: 2%;
+          border-width: 1px;
+          border-color: #25a2c3;
+          border-radius: 3%;
      }
+
      .articolo img{
           max-width: 100%;
-          max-height: 100%;
+          height:300px;
+          border-top-right-radius: 3%;
+          border-top-left-radius: 3%;
      }
 
      .cont {
           padding:150px 10px 100px 150px;
      }
-     footer, footer a{
-          background-color: #25a2c3;
+
+     .lista{
+          list-style-type: none;
      }
-     .pigiare a, .banner, footer a,h2{
+
+     .sottolineato{
+          text-decoration: underline;
+          }
+
+     .pixabay, .copyright {
+          display: inline;
+          }
+
+     footer {
+          background-color: #25a2c3;
+          padding:50px 600px;
+          margin:0 auto;
+          text-align: left;
+     }
+     .pigiare a, h1, .banner, footer a,h2, #bottone, footer{
           color:white;
      }
+
+     h1{
+          font-size:3rem;
+           font-family: 'Montserrat', sans-serif;
+           margin-bottom: 10px;
+         }
+
     
