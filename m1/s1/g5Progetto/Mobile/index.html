@@ -17,8 +17,8 @@
           referrerpolicy="no-referrer" />
 </head>
 <body>
-     <header>
-          <div>
+     <header id="header">
+          <div class="logo">
                <a href="index.html">
                     <img src="../Immagini/logo.png" alt="Logo Epicode" style="width: 200px;height: 60px;">
                </a>
@@ -26,14 +26,12 @@
      </header>
      <main>
           <section class="partiamo">
-               <div class="cont">
                     <h1 class="titolo">Corso Web Developer</h1>
                     <p>Smetti di inseguire i titoli,  inizia a lavorare. Mentre tutti     vogliono arricchire il CV, tu pensa ad arricchire le tue competenze.
                      </p>
-                     <div class="pigiare">
-                     <a href="#" target="_self">PARTIAMO!</a>
-                    </div>
-               </div>
+                     <a href="#" target="_self">
+                         <button id="bottone" type="button">PARTIAMO!</button>
+                     </a>
           </section>
           <section class="spiegazione">
                <article>
@@ -54,10 +52,11 @@
           </section>
           <section class="banner">
                <div>
-                    <h2>Epicode garantisce</h2>
-                    <p>"3 mesi intensivi di corso che cambieranno radicalmente la tua vita".
+                    <h2 class="hbanner">Epicode garantisce</h2>
+                    <p class="citazione">3 mesi intensivi di corso che cambieranno radicalmente la tua vita".
                     </p>
-                    <p>Mario Rossi Ceo, Epicode</p>
+                    <p>Mario Rossi</p>
+                    <p>Ceo, Epicode</p>
                </div>
           </section>
      </main>
@@ -88,19 +87,21 @@
          </article>
      </aside>
      <footer>
-          <h2>Contattaci</h2>
+          <h1>Contattaci</h1>
                <address>
-                    <ul>
-                         <li>
-                              <a href="tel:+3911223456" title="Chiamaci"><i class="fas fa-phone-alt"></i>(+39)11223456</a>
+                    <ul class="lista">
+                         <li class="sottolineato link-footer">
+                              <a href="tel:+3911223456" title="Chiamaci"><i class="fas fa-phone-square-alt icon"></i>(+39)11223456</a>
                          </li>
-                         <li>
-                              <a href="mailto:info@epicode.school" title="Scrivici"><i class="fas fa-envelope"></i>info@epicode.school</a></li>
-                         <li>
-                              <a href="https://www.google.com/maps/search/VIA+APPIA+1+ROMA/@41.8791557,12.4955979,15z/data=!3m1!4b1?entry=ttu" title="Mappa" target ="_blank"><i class="fas fa-location-arrow"></i>Via Appia 1 -  00182 Roma (RM)</a></li>
+                         <li class="sottolineato link-footer">
+                              <a href="mailto:info@epicode.school" title="Scrivici"><i class="fas fa-envelope-square"></i>info@epicode.school</a></li>
+                         <li class="link-footer">
+                              <a href="https://www.google.com/maps/search/VIA+APPIA+1+ROMA/@41.8791557,12.4955979,15z/data=!3m1!4b1?entry=ttu" title="Mappa" target ="_blank"><i class="fas fa-external-link-square-alt"></i>Via Appia 1 -  00182 Roma (RM)</a></li>
                     </uL>
+               <div class="border"></div>
                </address>
-               <p>© 2021, Immagini di Pixabay</p>
+               <p class="copyright">© 2021, Immagini di </p>
+               <a class="pixabay sottolineato" href="https://pixabay.com/it/" target="_blank"  title="Sito web">Pixabay</a>
      </footer>
 </body>
 </html>
