@@ -1,5 +1,5 @@
 // Esercizi aggiuntivi (facoltativi) per D4
-import function giveMeRandom
+import {giveMeRandom}
 /* EXTRA 1
  Scrivi una funzione chiamata "checkArray" che riceve un array di numeri casuali (creati con la funzione "giveMeRandom") e per ogni elemento stampa in console
  se il suo valore è maggiore di 5 o no.
