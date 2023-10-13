@@ -24,8 +24,8 @@ body{
 
 .lista{
      display: flex;
-     flex-direction: columm;
-     align-items: flex-end;
+     justify-content: space-between;
+     
 }
 
 .li{
