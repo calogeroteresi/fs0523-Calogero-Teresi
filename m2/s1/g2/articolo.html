@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body id="top">
     <header>
-        <div>
+        <div class="brand">
             <img src="./assets/img/logo.svg" alt="logo del blog" width="250" height="60">
             <p>Epicode - Il blog dei developers</p>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" title="Home Page">Home</a></li>
-                <li><a href="articoli.html" title="Elenco degli articoli tecnici pubblicati">Articoli</a></li>
-                <li><a href="contatti.html" title="Candidati inviando un tuo cv">Job</a></li>
+                <li><a href="./index.html" title="Home Page">Home</a></li>
+                <li><a href="./articoli.html" title="Elenco degli articoli tecnici pubblicati">Articoli</a></li>
+                <li><a href="./contatti.html" title="Candidati inviando un tuo cv">Job</a></li>
             </ul>
         </nav>
 
@@ -33,14 +33,18 @@
     <hr>
 
     <main>
-        <article>
-            <h1>Come creare un template per i post</h1>
+        <article class="clearfix">
+            <div class="under-div">
+            <h1>Come creare un template per i post </h1>
+            <img src="assets/img/underline.svg" alt="">
+            </div>
             <p><i class="fas fa-pen-square"></i> di Mario Rossi - <span><i class="fas fa-clock"></i> pubblicato il
-                25-10-2020</span></p>
-                <img src="assets/img/HTML5_logo_and_wordmark.svg.png" width="100px" height= "90px">
-
-            <p>La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le <strong>parti
-                    comuni</strong> da applicare a tutte le pagine</p>
+                    25-10-2020</span></p>
+            <img src="./assets/img/badge.png" class="imgLeft" alt="logo Html5" width="70" height="70">
+            <p> La prima cosa
+                da
+                fare è suddividere in blocchi logici la pagina, identificando le <strong>parti comuni</strong> da
+                applicare a tutte le pagine</p>
 
             <p>Le varie aree saranno quindi suddivise in:</p>
             <ul>
@@ -59,7 +63,7 @@
             </ol>
 
             <p>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressoché totale.</p>
-        <div class="table">
+
             <table>
                 <caption>Diffusione dei CSS</caption>
                 <thead>
@@ -97,12 +101,12 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+
             <p>Un test di validazione potrà essere fatto tramite il <a href="https://jigsaw.w3.org/css-validator/"
                     target="blank" title="Validatore CSS online del W3C">tool online</a> dedicato allo scopo. Una volta
                 ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come
                 loro:</p>
-        <div class="flex">
+
             <iframe width="300" height="300" src="https://www.youtube.com/embed/dvOvHXruEDM"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -119,14 +123,13 @@
                     </fieldset>
                 </form>
             </section>
-        </div>
+
         </article>
 
         <aside>
             <h2>Articoli correlati</h2>
-        <div class="flex-aside">
             <div>
-                <a href="post2.html"
+                <a href="./post2.html"
                     title="Passaggi guidati per validare correttamente tutto il codice sviluppato">Validare il codice
                     HTML</a>
                 <p><i class="fas fa-tag"></i> Categoria: develop</p>
@@ -134,7 +137,7 @@
             </div>
 
             <div>
-                <a href="post3.html"
+                <a href="./post3.html"
                     title="Passaggi guidati per controllare e correggere tutto il codice sviluppato">Correggere la
                     sintassi</a>
                 <p><i class="fas fa-tag"></i> Categoria: develop</p>
@@ -142,14 +145,21 @@
             </div>
 
             <div>
-                <a href="post4.html" title="Consigli ed approcci per ridurre il peso della pagina">Meno Kb nella
+                <a href="./post4.html" title="Consigli ed approcci per ridurre il peso della pagina">Meno Kb nella
                     pagina</a>
                 <p><i class="fas fa-tag"></i> Categoria: ottimizzazione</p>
                 <p><i class="fas fa-calendar-alt"></i> Data: 30-9-2020</p>
             </div>
-        </div>
         </aside>
+
+
+        
+        
     </main>
+    
+    <button class="btSize social">a</button>
+    <button class="btSize calendar"><i class="fa-calendar-plus:before"></i></button>
+    <button class="btSize top">a</button>
 
     <hr>
 

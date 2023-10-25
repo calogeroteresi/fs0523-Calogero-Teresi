@@ -152,7 +152,7 @@ aside h2 {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
-aside div {
+aside div div{
     background-color: #e3e3e3;
     border: 1px solid #c3c3c3;
     margin-bottom: 1em;
@@ -198,6 +198,11 @@ header nav li{
     margin-left: 10px;
 
 }
+iframe, section, .flex-aside > div{
+    display: block;
+}
+
+
 
 h1 {
     font-size: 5rem;
@@ -294,6 +299,27 @@ header div img{
     margin-right: 10px;
     margin-bottom: 0;
     
+}
+
+.flex{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: 20px;
+}
+
+.flex *{
+flex: 50%;
+margin-bottom: 0;
+}
+
+
+.flex-aside{
+    display: flex;
+}
+
+.flex-aside > div{
+    flex: 1 1 calc(100% /3);
 }
 
 
