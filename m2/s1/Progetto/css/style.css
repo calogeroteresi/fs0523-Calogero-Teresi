@@ -127,7 +127,7 @@
      .trending{
           flex-basis: 30%;
           display: flex;
-          padding:5px 5 px;
+          padding:5px 5px;
           margin:15px 0;
      }
      .trending-title{
@@ -443,6 +443,12 @@
                background-color: black;
                padding: 30px 20px;
           }
+          .trending{
+               flex-basis: 100% ;
+          }
+
+
+
 
           .cf{
                fill: rgba(255, 255, 255, 1);
