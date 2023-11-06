@@ -1,0 +1,12 @@
+$font-family: Helvetica, sans-serif;
+$font-size1: 12px;
+$font-size2: 16px;
+$font-size3: 20px;
+$size-title: 40px;
+
+@mixin title-big {
+     font-size: $size-title; 
+     font-weight: bold; 
+     color: $colore-testo; 
+   }
+   
