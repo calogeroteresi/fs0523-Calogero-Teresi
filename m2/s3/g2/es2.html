@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contatore</title>
+</head>
+<body>
+    <h1>Contatore</h1>
+    <p>Tempo trascorso (secondi): <span id="tempoTrascorso">0</span></p>
+
+    <script>
+
+        let contatore = sessionStorage.getItem('contatore') || 0;
+
+        function incrementaContatore() {
+            contatore++;
+            document.getElementById('tempoTrascorso').textContent = `${contatore}s`;
+            sessionStorage.setItem('contatore', contatore);
+        }
+        setInterval(incrementaContatore, 1000);
+    </script>
+</body>
+</html>
+
