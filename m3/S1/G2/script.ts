@@ -114,7 +114,7 @@ motherAccount.addInterest();
 console.log('Saldo conto figlio:', sonAccount.getBalance());
 console.log('Saldo conto madre:', motherAccount.getBalance());
 
-// Funzione per cercare l'account e mostrare i dettagli
+
 function searchAccount(accountId: string): void {
    const accountIdInput = document.getElementById('accountId') as HTMLInputElement;
    const currentBalanceSpan = document.getElementById('currentBalance') as HTMLSpanElement;
@@ -122,7 +122,7 @@ function searchAccount(accountId: string): void {
    accountId = accountIdInput.value;
    let account: Account | undefined;
 
-   // Esempio di ricerca dell'account in base all'ID inserito
+   
    if (accountId === '451Q') {
        account = sonAccount;
    } else if (accountId === '541Q') {
@@ -130,56 +130,46 @@ function searchAccount(accountId: string): void {
    }
 
    if (account) {
-       // Mostra il saldo attuale dell'account trovato
+       
        currentBalanceSpan.textContent = account.getBalance().toString();
        const accountDetailsDiv = document.getElementById('accountDetails') as HTMLDivElement;
        accountDetailsDiv.style.display = 'block';
    } else {
-       // Se l'account non è stato trovato, mostra un messaggio di errore
+       
        alert('Account non trovato.');
    }
 }
 
-// Funzione per depositare
 function deposit(): void {
    const depositAmountInput = document.getElementById('depositAmount') as HTMLInputElement;
    const amount = parseFloat(depositAmountInput.value);
 
-   // Esempio di deposito sull'account attivo (preso in base all'ID)
-   // Aggiungi qui la logica per depositare l'importo sull'account attivo
-   sonAccount.oneDeposit(amount); // Esempio: deposito sull'account figlio
+   sonAccount.oneDeposit(amount);
 
-   // Pulisci l'input dopo il deposito
    depositAmountInput.value = '';
 
-   // Aggiorna il saldo attuale
    updateBalance();
 }
 
-// Funzione per prelevare
+
 function withdraw(): void {
    const withdrawAmountInput = document.getElementById('withdrawAmount') as HTMLInputElement;
    const amount = parseFloat(withdrawAmountInput.value);
 
-   // Esempio di prelievo dall'account attivo (preso in base all'ID)
-   // Aggiungi qui la logica per prelevare l'importo dall'account attivo
-   sonAccount.oneWithdraw(amount); // Esempio: prelievo dall'account figlio
+   sonAccount.oneWithdraw(amount); 
 
-   // Pulisci l'input dopo il prelievo
    withdrawAmountInput.value = '';
 
-   // Aggiorna il saldo attuale
    updateBalance();
 }
 
 
 function handleSubmit(event: Event): void {
-   event.preventDefault(); // Previeni il comportamento di default del form
+   event.preventDefault();
 
    const accountIdInput = document.getElementById('accountId') as HTMLInputElement;
    const accountId = accountIdInput.value;
 
-   // Eseguire l'operazione di ricerca dell'account in base all'ID inserito
    searchAccount(accountId);
 }
 
@@ -187,15 +177,10 @@ function handleSubmit(event: Event): void {
 function updateBalance(): void {
    const currentBalanceSpan = document.getElementById('currentBalance') as HTMLSpanElement;
 
-   // Esempio di aggiornamento del saldo dell'account attivo (preso in base all'ID)
-   // Aggiungi qui la logica per ottenere il saldo dell'account attivo
-   const currentBalance = sonAccount.getBalance(); // Esempio: ottenere il saldo dell'account figlio
+   const currentBalance = sonAccount.getBalance(); 
 
-   // Aggiorna il saldo mostrato nell'interfaccia utente
    currentBalanceSpan.textContent = currentBalance.toString();
 }
 
-
-// Aggiungi un listener per l'evento di invio del form
 const accountForm = document.getElementById('accountForm') as HTMLFormElement;
 accountForm.addEventListener('submit', handleSubmit);
