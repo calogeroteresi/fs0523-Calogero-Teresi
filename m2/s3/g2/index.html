@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Form per creare oggetti Pet</title>
+</head>
+<style>
+     body {
+          max-width: 40vw;
+          margin: 0 auto;
+     }
+
+     h1 {
+          background-color: white;
+          font-size: 2rem;
+          text-align: center;
+          border: 1px solid gray;
+          background-color: rgb(204, 204, 204);
+          box-shadow: 1px 1px 2px gray;
+     }
+
+     #userForm {
+          padding: 100px 100px;
+          background-color: black;
+          text-align: center;
+          height: 20vh;
+     }
+
+     input[type="text"] {
+          width: 50%;
+          height: 20px;
+          box-shadow: 1px 1px 2px white;
+     }
+
+     label {
+          color: white;
+          width: 35%;
+          font-size: 1.4rem;
+
+     }
+
+     div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-align: center;
+          margin-bottom: 15px;
+     }
+
+     button {
+          width: 40%;
+          padding: 5px 0;
+          font-size: 1.5rem;
+          font-style: italic;
+          font-weight: bold;
+          margin-top: 80px;
+          margin-right: 10px;
+     }
+
+     button:hover {
+          background-color: rgb(204, 204, 204);
+          box-shadow: 1px 1px 2px gray;
+     }
+
+     h2 {
+          background-color: red;
+          font-size: 1.5rem;
+          padding: 5px;
+          margin: 0;
+          margin-top: 10px;
+          border: 2px solid black;
+          border-radius: 2px;
+          box-shadow: 1px 1px 2px black;
+     }
+
+     ul {
+          min-height: 20vh;
+     }
+
+     li {
+          color: black;
+          font-size: 1.2rem;
+          font-weight: bold;
+     }
+
+
+     @media screen and (max-width:768px) {
+          body {
+               max-width: 90vw;
+          }
+     }
+</style>
+
+<body>
+     <h1>Form Nome</h1>
+     <form id="userForm">
+          <div>
+               <label for="userName">Nome</label>
+               <input type="text" id="userName" required><br>
+          </div>
+          <button type="button" id="salvaButton">Salva</button>
+          <button type="button" id="cancellaButton">Cancella</button>
+     </form>
+     <div id="cont-lista">
+          <ul id="lista">
+
+          </ul>
+     </div>
+
+
+
+     <script>
+          let nomiSalvati = [];
+
+
+
+
+          function ricaricaNomi() {
+
+               const nomiSalvatiLS = JSON.parse(localStorage.getItem('nomiUtenti'));
+               let contLista = document.getElementById('cont-lista');
+               let lista = document.getElementById('lista');
+               let nomi = "";
+               if (Array.isArray(nomiSalvatiLS)) {
+                    nomiSalvati = nomiSalvatiLS;
+                    nomiSalvati.forEach(function (nomeUtente) {
+                         nomi = `${nomeUtente} `;
+                         li = document.createElement('li');
+                         li.innerHTML = nomi;
+                         lista.appendChild(li);
+                    });
+               }
+          }
+
+
+          ricaricaNomi();
+
+          salvaButton.addEventListener('click', function () {
+               let lista = document.querySelector('#lista');
+               const nomeUtente = document.getElementById('userName').value;
+               if (nomeUtente) {
+                    nomiSalvati.push(nomeUtente);
+                    localStorage.setItem('nomiUtenti', JSON.stringify(nomiSalvati));
+                    li = document.createElement('li');
+                    li.innerHTML = `${nomeUtente}`;
+                    lista.appendChild(li);
+               }
+          });
+
+          cancellaButton.addEventListener('click', function () {
+               const nomeUtente = document.getElementById('userName').value;
+
+               const arrayIndici = [];
+               nomiSalvati.forEach((nome, index) => {
+                    if (nome === nomeUtente) {
+                         arrayIndici.push(index);
+                    }
+               });
+
+               const lista = document.getElementById('lista');
+               arrayIndici.reverse().forEach((indice) => {
+                    if (indice >= 0) {
+                         lista.removeChild(lista.getElementsByTagName('li')[indice]);
+                         nomiSalvati.splice(indice, 1);
+                    }
+               });
+
+               localStorage.setItem('nomiUtenti', JSON.stringify(nomiSalvati));
+          });
+
+     </script>
+</body>
+
+</html>

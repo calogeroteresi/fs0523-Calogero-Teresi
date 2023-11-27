@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div id="phoneApp">
+          <h1>App Smartphone</h1>
+          <div id="phone1">
+              <h2>Phone 1</h2>
+              <p>Credito residuo: <span id="credit1"></span> </p>
+              <input type="number" min="5" id="ricarcia">
+              <button id="BtnRicarica">Ricarica</button>
+              <p>Numero di chiamate: <span id="callCount1"></span></p>
+              <label for="phoneNumber1">Numero di telefono:</label>
+              <input type="number" min="100" id="phoneNumber1" placeholder="Inserisci il numero">
+              <label for="duration1">Durata chiamata (minuti):</label>
+              <input type="number" min="0" id="duration1" placeholder="Durata in minuti">
+              <button onclick="makeCall(1)">Effettua chiamata</button>
+              <button onclick="resetCalls(1)">Azzera chiamate</button>
+              <button onclick="showCalls(1)">Mostra registro chiamate</button>
+          </div>
+      </div>
+     <script src="script.js"></script>
+</body>
+</html>
