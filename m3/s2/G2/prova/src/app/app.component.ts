@@ -3,8 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'prova';
+  newTask: string = ''; // Dichiarazione della proprietà newTask
+  tasks: string[] = []; // Dichiarazione della proprietà tasks
+
+  addTask() {
+    // Logica per aggiungere una nuova attività
+  }
+
+  removeTask(index: number) {
+    // Logica per rimuovere un'attività
+  }
 }
