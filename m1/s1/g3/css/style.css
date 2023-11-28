@@ -1,0 +1,31 @@
+
+.inizio img{display:block; margin:auto; width:40%}
+.inizio h3{text-align:center; padding:5px 5px ; 
+     background-color: rgb(238, 222, 202); 
+     border-top-style: solid; border-top-color: rgb(239, 129, 50);}
+
+.immagine {margin:auto;
+           width:50%}
+     .immagine h1{margin: auto; width:80%; text-align:center; line-height:0.8;}
+     .immagine p{text-align:center}
+
+.link {margin:auto;
+            width:50%;
+            line-height: 0.2;
+            border-left-style: solid; border-left-color: yellow;
+           }
+     .link h1{color: red;} 
+     .link a{color: blue;}
+
+.ingredienti {margin:auto;
+     width:50%;
+     line-height:1.6;
+     padding-top: 3rem}
+     .ingredienti p {font-weight: bold;}
+
+.method  {margin:auto;
+     width:50%}
+     .method ol {font-weight: bold;}
+     
+.pie {margin:auto;
+     width:50%}

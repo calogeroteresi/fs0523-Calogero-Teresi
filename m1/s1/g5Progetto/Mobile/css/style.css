@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+:root{
+     --colorefont: #393d41;
+     --coloreheadings: #25a2c3;
+     --colorefooter: #c8e7f0;
+}
+     * {
+     box-sizing:border-box;
+     }
+
+     a {
+          text-decoration: none;
+     }
+
+
+
+body {
+     font-size: 1.2rem;
+     line-height: 1.65;
+     text-align: center;
+     background-color: white;
+     color: var(--colorefont);
+     font-family: 'Open Sans', sans-serif;
+     }
+
+
+
+#header {
+     background-color: black;
+     padding: 30px;
+     margin: auto;
+       }
+
+
+          
+
+
+
+     h3, .articolo a, .titolo {
+     color: var(--coloreheadings);
+     font-family: 'Montserrat', sans-serif;
+     }
+
+
+
+
+     .partiamo {
+     display: block;
+     height:400px;
+     background-image: url(../../Immagini/banner.jpg);
+     background-size: contain;
+     background-attachment: fixed;
+     padding: 40px 40px;
+    }
+
+
+
+
+     .titolo{
+          margin-bottom: 30px;
+          font-size: 3rem;
+          line-height: 1;
+     }
+     
+    
+    
+    .spiegazione {
+         padding: 50px 40px;
+     }
+     
+     
+     
+     .spiegazione h3{
+          margin-top: 30px;
+          margin-bottom: 10px;
+     }
+     
+     .image{
+          padding:0 50px 50px;
+          margin-top: 40px;
+          
+     }
+
+     .image img{
+          border-radius: 100%;
+          width: 100%;
+     }
+     
+     
+     
+     
+     
+     .banner{
+          background-color: #e22d0e;
+          padding:50px 40px;
+          height:350px;
+     }
+     
+     .hbanner{ 
+          font-size: 2.5rem;
+          font-family: 'Montserrat', sans-serif;
+ 
+     }
+     .citazione {
+          margin: 30px 0;
+          font-style: italic;
+     }
+     
+     .articolo {
+          margin: 30px;
+          border-color:#dee1e3;
+          border-width: 0.1rem;
+          border-style: solid;
+          border-radius: 2%;
+     }
+
+     .articolo img{
+          max-width: 100%;
+          max-height: 100%;
+          margin-bottom :30px;
+     }
+
+     .articolo p{
+          padding:10px 30px 40px;
+     }
+
+
+     footer {
+          background-color: var(--coloreheadings);
+          padding:50px 0px 80px;
+     }
+
+     .lista{
+          list-style-type: none;
+     }
+
+     h1{
+      font-size:3rem;
+       font-family: 'Montserrat', sans-serif;
+       margin-bottom: 10px;
+     }
+
+     .sottolineato{
+     text-decoration: underline;
+     }
+
+     .lista i{
+          margin-right: 5px;
+     }
+
+     .pixabay, .copyright {
+          display: inline;
+     }
+     .border{
+     width:50%;
+     height:20px;
+     margin:auto;
+     margin-top: 20px;
+     border-style: solid;
+     border-top-width: 1px;
+
+     }
+     .pigiare a, .banner, footer *, #bottone{
+          color:white;
+     }
+
+     #bottone {
+          background-color: #f04c2f  ;
+          padding: 12px 30px;
+          font-family: 'Montserrat', sans-serif;
+          font-size:medium;
+          border-style: none;
+          border-radius: 5%;
+          margin-top: 30px;
+     }

@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          #gameForm{
+               margin: 0 auto;
+               margin-top: 200px;
+               width: 200px;
+               height: 30vh;
+               padding: 20px 100px;
+               background-color: aquamarine;
+               text-align: center;
+          }
+
+          .input-container{
+               margin: 20px 0;
+          }
+
+          .results{
+               margin:0 auto;
+               width: 200px;
+          }
+     </style>
+
+</head>
+<body>
+     <form id="gameForm">
+          <div class="input-container">
+              <label for="player1">Peppino</label>
+              <input type="number" id="player1" name="player1" min="1" max="100" required>
+          </div>
+          <div class="input-container">
+              <label for="player2">Gino</label>
+              <input type="number" id="player2" name="player2" min="1" max="100" required>
+          </div>
+          <button type="submit">Gioca!</button>
+      </form>
+      <div class="results">
+               <p class="numberRandom"></p>
+               <p class="testo"></p>
+      </div>
+     <script src="script.js"></script>
+</body>
+</html>
