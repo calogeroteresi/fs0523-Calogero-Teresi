@@ -5,5 +5,6 @@ export interface IPosts {
     content: string;
     subContent: string;
     active: boolean;
+    type: 'news' | 'politic' | 'education';
 
 }

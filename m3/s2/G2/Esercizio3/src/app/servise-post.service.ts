@@ -1,54 +1,43 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { IPosts } from './Models/i-posts';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServisePostService {
-  private postsUrl = 'assets/db.json';
-  private data: IPosts[] = [];
-  private activePosts: IPosts[] = [];
-  private inactivePosts: IPosts[] = [];
+  private apiUrl = 'http://localhost:3000/pizze'; // Assuming this is your API URL
 
-  constructor() {
-    this.getPosts();
+  constructor(private http: HttpClient) {}
+
+  getAll(): Observable<{ allPosts: IPosts[], activePosts: IPosts[], inactivePosts: IPosts[] }> {
+    return this.http.get<IPosts[]>(this.apiUrl).pipe(
+      map(posts => {
+        const activePosts = posts.filter(p => p.active);
+        const inactivePosts = posts.filter(p => !p.active);
+        return { allPosts: posts, activePosts, inactivePosts };
+      })
+    );
   }
 
-  async getPosts(): Promise<void> {
-    try {
-      const response = await fetch(this.postsUrl);
-      if (!response.ok) {
-        throw new Error('Errore nel recupero dei dati');
-      }
-      this.data = await response.json();
-      this.refreshPosts();
-    } catch (error) {
-      console.error('Si è verificato un errore:', error);
-    }
+  getById(id: string): Observable<IPosts> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<IPosts>(url);
   }
 
-  private refreshPosts(): void {
-    this.activePosts = this.data.filter(post => post.active === true);
-    this.inactivePosts = this.data.filter(post => post.active === false);
+  create(post: Partial<IPosts>): Observable<IPosts> {
+    return this.http.post<IPosts>(this.apiUrl, post);
   }
 
-  getAllPosts(): IPosts[] {
-    return this.data;
+  update(post: IPosts): Observable<IPosts> {
+    const url = `${this.apiUrl}/${post.id}`;
+    return this.http.put<IPosts>(url, post);
   }
 
-  getActivePosts(): IPosts[] {
-    return this.activePosts;
-  }
-
-  getInactivePosts(): IPosts[] {
-    return this.inactivePosts;
-  }
-
-  updatePostStatus(postId: number, newStatus: boolean): void {
-    const postToUpdate = this.data.find(post => post.id === postId);
-    if (postToUpdate) {
-      postToUpdate.active = newStatus;
-      this.refreshPosts(); // Aggiorna post attivi e inattivi
-    }
+  delete(id: string): Observable<IPosts> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete<IPosts>(url);
   }
 }

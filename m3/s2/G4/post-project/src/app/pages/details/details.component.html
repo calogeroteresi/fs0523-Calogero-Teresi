@@ -1,0 +1,14 @@
+<div class="container ">
+  <ng-container *ngIf="post; else elseTemplate">
+    <h1 class="text-center mt-4 mb-3">
+      {{ post.title }}
+    </h1>
+    <p>{{post.content}}</p>
+    <p>{{post.subContent}}</p>
+    <p>Categoria: {{post.type}}</p>
+    <p>Autore: {{post.user}}</p>
+  </ng-container>
+</div>
+<ng-template #elseTemplate>
+  <h1 class="text-center mt-5">post non trovato</h1>
+</ng-template>

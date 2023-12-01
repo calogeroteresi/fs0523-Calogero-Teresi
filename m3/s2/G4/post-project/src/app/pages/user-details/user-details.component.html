@@ -1,0 +1,9 @@
+<ng-container *ngIf="user !== undefined; else elseTemplate">
+  <h3>{{ user.name }}</h3>
+  <p>email: {{ user.email }}</p>
+  <p>ruolo: {{ user.role }}</p>
+</ng-container>
+<ng-template #elseTemplate>
+  <p>utente non trovato</p>
+</ng-template>
+
