@@ -1,0 +1,200 @@
+
+$table-background: lightgray;
+$cell-padding: 10px;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+ /* Centra il testo orizzontalmente */
+
+  th, td {
+    padding: $cell-padding;
+    border: 1px solid $table-background;
+    text-align: left;
+    vertical-align: middle; /* Centra il contenuto verticalmente */
+    width: 150px; /* Larghezza fissa per le celle */
+  }
+
+
+  th {
+    background-color: $table-background;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  td {
+
+    word-wrap: break-word;
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 5px;
+      .svg-delete{
+        fill: red;
+      }
+      svg {
+        fill: black;
+        box-shadow: -1px 1px 12px 0px lightseagreen;
+        width: 20px;
+        height: 20px;
+        fill: green;
+      }
+    }
+  }
+  .wide-cell {
+    max-width: 300px;
+  }
+
+  .narrow-cell,.medium-cell {
+    max-width: 50px;
+    text-align: left;
+    line-height: 1.2;
+  }
+
+
+  .btnGroup{
+    max-width:30px;
+    text-align:center;
+  }
+}
+
+.createForm, .editForm{
+  position: fixed;
+  right:30px;
+  top: 100px;
+  z-index: 500;
+}
+
+.contLoading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  border: 4px solid transparent;
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-right: 10px; /* Spazio tra lo spinner e il testo */
+}
+
+p {
+  display: block;
+  margin: 0; /* Rimuove il margine predefinito del paragrafo */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+/* Stili per il checkbox come cerchio */
+.checkbox-container {
+  position: relative;
+  display: inline-block;
+  width: 24px; /* Imposta la dimensione desiderata del cerchio */
+  height: 24px; /* Imposta la dimensione desiderata del cerchio */
+  margin-right: 10px;
+}
+
+/* Stili per il cerchio */
+.checkmark-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid black; /* Rende il cerchio */ /* Puoi personalizzare lo stile del bordo */
+  cursor: pointer; /* Mostra il cursore come selezionabile */
+}
+
+/* Nascondi il vero checkbox */
+.custom-checkbox {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Aggiungi la spunta quando il checkbox è selezionato */
+.custom-checkbox:checked + .checkmark-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px; /* Imposta la dimensione della spunta */
+  height: 12px; /* Imposta la dimensione della spunta */
+  border-radius: 50%;
+  background: #000; /* Colore della spunta */
+}
+
+.titleCheck {
+  display: flex;
+  align-items: center;
+}
+
+.titleTodo {
+  word-wrap: break-word;
+  max-width: 88%; /* Larghezza massima flessibile */
+}
+
+.priorityLow{
+  border: 2px solid  yellow;
+}
+
+.priorityHigh{
+  border: 2px solid  red;
+}
+
+.priorityMedium{
+  border: 2px solid  orange;
+}
+
+form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 350px; /* Modifica la larghezza massima come preferisci */
+  margin: 0 auto; /* Centra il form sulla pagina */
+  background: radial-gradient(circle, #FFD700, #FF4500);
+ /* Sfumatura da giallo a rosso */
+  box-shadow: 10px 30px 15px rgba(206, 4, 4, 0.3);
+  border-radius: 5px;
+  height: 400px;
+  padding:15px;
+  box-sizing: border-box;
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: yellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+    width:90%;
+    bottom:20px;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+

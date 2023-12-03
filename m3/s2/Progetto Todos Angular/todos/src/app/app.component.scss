@@ -1,5 +1,14 @@
+
 .container{
   margin: 0 auto;
-  width: 60vw;
+  width: 50vw;
+  min-height: 60vh;
   text-align: center;
+  background-color: beige;
+  padding: 90px 20px;
+}
+
+.contMain{
+  background: linear-gradient(to bottom right,#FF4500,#FFD700 );
+  min-height: 100vh;
 }

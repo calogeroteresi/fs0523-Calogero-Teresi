@@ -1,0 +1,66 @@
+form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 350px; /* Modifica la larghezza massima come preferisci */
+  margin: 0 auto; /* Centra il form sulla pagina */
+  background: radial-gradient(circle, #FFD700, #FF4500);
+ /* Sfumatura da giallo a rosso */
+  box-shadow: 10px 30px 15px rgba(206, 4, 4, 0.3);
+  border-radius: 5px;
+  height: 400px;
+  padding:15px;
+  box-sizing: border-box;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Spazio tra i campi del form */
+    width: 100%; /* Fai sì che il div occupi tutta la larghezza */
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: rgb(135, 10, 10);
+  }
+
+  textarea {
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: beige;
+    border: 2px solid red;
+    transition: border-color 5s ease-in-out;
+    width: 100%; /* Fai sì che la textarea occupi tutta la larghezza disponibile */
+    box-sizing: border-box; /* Considera il padding nel calcolo della larghezza */
+    resize: none; /* Disabilita il ridimensionamento manuale */
+    overflow-y: hidden; /* Nascondi lo scroll verticale */
+    min-height: 150px;
+    &:focus {
+      border-color: dodgerblue;
+      outline: none;
+    }
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: yellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+    width:90%;
+    bottom:20px;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}

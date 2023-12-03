@@ -1,136 +1,63 @@
 {
   "todos": [
     {
+      "title": "Acquistare latte, uova, pane, frutta e verdura.",
+      "priority": "media",
+      "completed": false,
+      "createdAt": "2023-12-03T20:03:18.140Z",
       "id": 1,
-      "title": "Comprare le uova",
-      "completed": false
+      "completedAt": "2023-12-03T21:32:08.828Z"
     },
     {
+      "title": "Leggere il capitolo 3, prendere appunti e fare esercizi.",
+      "priority": "media",
+      "completed": false,
+      "createdAt": "2023-12-03T20:04:09.407Z",
       "id": 2,
-      "title": "Portare Celeste dal veterinaio",
-      "completed": false
+      "edit": "2023-12-03T20:21:15.926Z",
+      "completedAt": "2023-12-03T21:32:09.607Z"
     },
     {
-      "id": 3,
-      "title": "Completare il task",
-      "completed": true
-    },
-    {
-      "id": 4,
-      "title": "Passare dalla farmacia",
-      "completed": true
-    },
-    {
-      "id": 5,
       "title": "Andare in banca",
-      "completed": true
-    },
-    {
-      "title": "dddddd",
-      "completed": "0",
-      "id": 7
-    },
-    {
-      "title": "dddddd",
-      "completed": true,
-      "id": 8
-    },
-    {
-      "title": "sssss",
-      "id": 9,
-      "completed": true
-    },
-    {
-      "title": "aaaaaaaa",
-      "completed": true,
-      "id": 10
-    },
-    {
-      "title": "aaaaaa",
-      "completed": true,
-      "id": 12
-    },
-    {
-      "title": "Cucinare ",
-      "completed": true,
-      "id": 13
-    },
-    {
-      "completed": true,
-      "title": "Calogero",
-      "id": 15
-    },
-    {
-      "completed": true,
-      "title": "Calogero",
-      "id": 17
-    },
-    {
-      "title": "aaaadddd",
+      "priority": "bassa",
       "completed": false,
-      "id": 19
+      "createdAt": "2023-12-03T20:04:24.784Z",
+      "id": 3,
+      "completedAt": "2023-12-03T20:05:32.168Z"
     },
     {
-      "title": "sssss",
-      "completed": false,
-      "id": 20
-    },
-    {
-      "title": "MAtteo",
+      "title": "Prenotare dentista",
+      "priority": "media",
       "completed": true,
-      "id": 22
+      "createdAt": "2023-12-03T20:04:52.137Z",
+      "id": 4,
+      "edit": "2023-12-03T20:12:25.199Z",
+      "completedAt": "2023-12-03T20:31:23.307Z"
     },
     {
-      "title": "ddddddddd",
-      "completed": false,
-      "id": 23
-    },
-    {
-      "title": "ddddddddd",
-      "completed": false,
-      "id": 24
-    },
-    {
-      "title": "ddddddddd",
+      "title": "Consegnare compito ?",
+      "priority": "media",
       "completed": true,
-      "id": 25
+      "createdAt": "2023-12-03T20:05:04.803Z",
+      "id": 5,
+      "edit": "2023-12-03T20:14:49.408Z",
+      "completedAt": "2023-12-03T20:31:48.930Z"
     },
     {
-      "title": "ddddddddd",
+      "title": "Scrivere codice per la funzionalità X, testare e risolvere bug.",
+      "priority": "media",
       "completed": true,
-      "id": 26
+      "createdAt": "2023-12-03T20:05:27.043Z",
+      "id": 6,
+      "completedAt": "2023-12-03T20:31:23.797Z"
     },
     {
-      "title": "ddddddddd",
+      "title": " Leggere almeno due capitoli del libro X.",
+      "priority": "media",
       "completed": true,
-      "id": 27
-    },
-    {
-      "title": "sssssss",
-      "completed": true,
-      "id": 29
-    },
-    {
-      "title": "Todoo",
-      "completed": true,
-      "id": 33
-    },
-    {
-      "title": "Todoo",
-      "completed": true,
-      "id": 34
-    },
-    {
-      "title": "todooo",
-      "completed": true,
-      "id": 35
-    },
-    {
-      "createdAt": "2023-12-14",
-      "title": "cmdmkdkdc",
-      "completed": false,
-      "id": 36,
-      "edit": "2023-12-01T15:48:25.688Z"
+      "createdAt": "2023-12-03T20:07:38.217Z",
+      "id": 7,
+      "completedAt": "2023-12-03T20:31:49.711Z"
     }
   ]
 }

@@ -1,0 +1,30 @@
+.headerContainer {
+  background-color: red;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  z-index: 600;
+  top:0;
+  width: 100vw;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 20px;
+
+    &:hover {
+      color: yellow;
+    }
+
+    &:visited { /* Stile per link visitati */
+      color: yellow;
+    }
+
+    &:active, &:focus {
+      text-decoration: underline;
+      color: yellow;
+      // Mantieni lo stile attivo o in focus
+    }
+  }
+}

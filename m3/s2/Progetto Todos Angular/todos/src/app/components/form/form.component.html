@@ -1,16 +1,22 @@
 <form (ngSubmit)="onSubmit()">
   <div>
     <label for="title">Title</label>
-    <input type="text" id="title" name="title" [(ngModel)]="newTodo.title" required>
+    <textarea
+      type="text"
+      id="title"
+      name="title"
+      [(ngModel)]="newTodo.title"
+      required
+    >
+    </textarea>
+    <label for="priority">Priorità:</label>
+    <select id="priority" [(ngModel)]="newTodo.priority" name="priority">
+      <option value="alta">Alta</option>
+      <option value="media">Media</option>
+      <option value="bassa">Bassa</option>
+    </select>
   </div>
   <button type="submit">Crea Post</button>
 </form>
 
 
-<div *ngIf="loading" class="alert alert-warning">
-  Salvataggio todo in corso
-</div>
-
-<div *ngIf="oldPost">
-    Hai creato un nuovo elemento {{oldPost.title}}
-</div>

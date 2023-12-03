@@ -43,13 +43,24 @@ onDelete(id: number): void {
   });
 }
 
-toggleTodoStatus(post: ITodo): void {
-  this.todoSvc.toggleCompleted(post).subscribe(updatedPost => {
-    const index = this.todos.findIndex(p => p.id === updatedPost.id);
-    if (index !== -1) {
-      this.todos.splice(index, 1); // Rimuovi localmente il post con il nuovo stato
-    }
+toggleTodoStatus(todo: ITodo): void {
+  console.log(todo);
+  todo.completed = !todo.completed;
+  this.todoSvc.toggleCompleted(todo).subscribe(updatedTodo => {
+    console.log(updatedTodo);
+    this.todos = this.todos.filter(todo => todo.id !== updatedTodo.id);
   });
+}
+
+
+
+getClassObj(todo: ITodo){
+  return {
+    'priorityHigh': todo.priority === 'alta',
+    'priorityMedium': todo.priority === 'media',
+    'priorityLow': todo.priority === 'bassa',
+
+  };
 }
 
 }

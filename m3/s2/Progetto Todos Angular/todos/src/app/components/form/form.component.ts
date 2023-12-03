@@ -4,7 +4,7 @@ import { ITodo } from '../../Models/itodo';
 import { TodoService } from '../../todos.service';
 
 @Component({
-  selector: 'app-form',
+  selector: '.app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })

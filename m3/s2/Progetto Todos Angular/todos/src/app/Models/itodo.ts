@@ -3,5 +3,7 @@ export interface ITodo {
   title : string,
   completed:boolean,
   createdAt:Date,
-  edit:Date
+  edit:Date,
+  priority: string,
+  completedAt:Date
 }
