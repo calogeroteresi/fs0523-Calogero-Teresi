@@ -9,14 +9,25 @@
       required
     >
     </textarea>
-    <label for="priority">Priorità:</label>
+    <label for="priority">Priority:</label>
     <select id="priority" [(ngModel)]="newTodo.priority" name="priority">
-      <option value="alta">Alta</option>
-      <option value="media">Media</option>
-      <option value="bassa">Bassa</option>
+      <option value="alta">High</option>
+      <option value="media">Medium</option>
+      <option value="bassa">Low</option>
     </select>
   </div>
   <button type="submit">Crea Post</button>
 </form>
 
+
+<div class="contCaricamento">
+<div *ngIf="loading" class="alert alert-warning">
+  Salvataggio todo in corso
+</div>
+
+<div  *ngIf="oldPost">
+    <p>Hai creato un nuovo elemento</p>
+    <p>{{oldPost.title}}</p>
+</div>
+</div>
 

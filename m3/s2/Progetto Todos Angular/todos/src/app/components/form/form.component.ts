@@ -26,6 +26,10 @@ export class FormComponent {
       .subscribe(createdTodo => {
         console.log('Post creato:', createdTodo);
         this.oldPost = createdTodo;
+         setTimeout(()=>{
+         this.loading = false;
+         this.oldPost = null;
+       },3000)
         this.todoCreated.emit(createdTodo); // Emetti l'evento per notificare al genitore
       });
   }

@@ -11,6 +11,7 @@ import { Observer } from 'rxjs';
 export class CompletatiComponent {
 
   todos: ITodo[]=[];
+  isLoading: boolean = true;
 
   constructor(private todoSvc: TodoService){
 }
@@ -23,6 +24,7 @@ fetchTodos(): void {
   this.todoSvc.getAll().subscribe({
     next: (data: { completedTodos: ITodo[]; }) => {
       this.todos = data.completedTodos;
+      this.isLoading = false;
     },
     error: (error) => {
       console.error('Si è verificato un errore nel recupero dei post attivi:', error);
@@ -51,7 +53,25 @@ toggleTodoStatus(todo: ITodo): void {
     this.todos = this.todos.filter(todo => todo.id !== updatedTodo.id);
   });
 }
+deleteCompletedTodos() {
+  const todosToDelete = this.todos.filter(todo => todo.completed === true);
 
+  todosToDelete.forEach(todo => {
+    this.todoSvc.delete(todo.id).subscribe({
+      next: () => {
+        // Rimuovi l'elemento eliminato dalla lista locale
+        const index = this.todos.indexOf(todo);
+        if (index > -1) {
+          this.todos.splice(index, 1);
+        }
+      },
+      error: (error) => {
+        console.error(`Si è verificato un errore durante l'eliminazione del todo ${todo.id}:`, error);
+        // Gestisci eventuali errori durante l'eliminazione
+      }
+    });
+  });
+}
 
 
 getClassObj(todo: ITodo){

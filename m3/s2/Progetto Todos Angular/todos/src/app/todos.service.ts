@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { EMPTY, Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { ITodo } from './Models/itodo'; // Assicurati di avere un'interfaccia ITodo appropriata
 
@@ -44,6 +44,20 @@ export class TodoService {
   delete(id: number): Observable<ITodo> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete<ITodo>(url);
+  }
+
+  deleteAll(): Observable<any> {
+    const url = `${this.apiUrl}/all`; // Esempio: URL per eliminare tutti gli elementi
+
+   
+    const confirmed = confirm('Sei sicuro di voler eliminare tutti gli elementi?');
+
+    if (confirmed) {
+      return this.http.delete(url);
+    } else {
+
+      return EMPTY; // o throwError('Eliminazione annullata');
+    }
   }
 
   onTodoCreated(newTodo: ITodo): void {

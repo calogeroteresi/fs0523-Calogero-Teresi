@@ -79,13 +79,13 @@
   <input type="text" [(ngModel)]="selectedTodoForEdit.id" name="id" disabled />
 
   <label>Title:</label>
-  <input type="text" [(ngModel)]="selectedTodoForEdit.title" name="title" />
+  <textarea type="text" [(ngModel)]="selectedTodoForEdit.title" name="title"></textarea>
 
   <label for="priority">Priorità:</label>
     <select id="priority" [(ngModel)]="selectedTodoForEdit.priority" name="priority">
-      <option value="alta">Alta</option>
-      <option value="media">Media</option>
-      <option value="bassa">Bassa</option>
+      <option value="alta">High</option>
+      <option value="media">Medium</option>
+      <option value="bassa">Low</option>
     </select>
 
   <button type="submit">Salva modifiche</button>

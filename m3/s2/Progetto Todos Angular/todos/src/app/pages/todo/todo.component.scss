@@ -44,7 +44,7 @@ table {
     }
   }
   .wide-cell {
-    max-width: 300px;
+    width: 400px;
   }
 
   .narrow-cell,.medium-cell {
@@ -179,6 +179,24 @@ form {
   padding:15px;
   box-sizing: border-box;
 
+  textarea {
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: beige;
+    border: 2px solid red;
+    transition: border-color 5s ease-in-out;
+    width: 100%; /* Fai sì che la textarea occupi tutta la larghezza disponibile */
+    box-sizing: border-box; /* Considera il padding nel calcolo della larghezza */
+    resize: none; /* Disabilita il ridimensionamento manuale */
+    overflow-y: hidden; /* Nascondi lo scroll verticale */
+    min-height: 150px;
+    &:focus {
+      border-color: dodgerblue;
+      outline: none;
+    }
+  }
   button[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;

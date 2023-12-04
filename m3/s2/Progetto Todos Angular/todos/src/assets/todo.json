@@ -6,29 +6,22 @@
       "completed": false,
       "createdAt": "2023-12-03T20:03:18.140Z",
       "id": 1,
-      "completedAt": "2023-12-03T21:32:08.828Z"
+      "completedAt": "2023-12-03T21:32:08.828Z",
+      "edit": "2023-12-03T23:12:50.794Z"
     },
     {
       "title": "Leggere il capitolo 3, prendere appunti e fare esercizi.",
-      "priority": "media",
+      "priority": "alta",
       "completed": false,
       "createdAt": "2023-12-03T20:04:09.407Z",
       "id": 2,
-      "edit": "2023-12-03T20:21:15.926Z",
+      "edit": "2023-12-03T23:23:22.328Z",
       "completedAt": "2023-12-03T21:32:09.607Z"
-    },
-    {
-      "title": "Andare in banca",
-      "priority": "bassa",
-      "completed": false,
-      "createdAt": "2023-12-03T20:04:24.784Z",
-      "id": 3,
-      "completedAt": "2023-12-03T20:05:32.168Z"
     },
     {
       "title": "Prenotare dentista",
       "priority": "media",
-      "completed": true,
+      "completed": false,
       "createdAt": "2023-12-03T20:04:52.137Z",
       "id": 4,
       "edit": "2023-12-03T20:12:25.199Z",
@@ -37,7 +30,7 @@
     {
       "title": "Consegnare compito ?",
       "priority": "media",
-      "completed": true,
+      "completed": false,
       "createdAt": "2023-12-03T20:05:04.803Z",
       "id": 5,
       "edit": "2023-12-03T20:14:49.408Z",
@@ -46,7 +39,7 @@
     {
       "title": "Scrivere codice per la funzionalità X, testare e risolvere bug.",
       "priority": "media",
-      "completed": true,
+      "completed": false,
       "createdAt": "2023-12-03T20:05:27.043Z",
       "id": 6,
       "completedAt": "2023-12-03T20:31:23.797Z"
@@ -57,7 +50,23 @@
       "completed": true,
       "createdAt": "2023-12-03T20:07:38.217Z",
       "id": 7,
-      "completedAt": "2023-12-03T20:31:49.711Z"
+      "completedAt": "2023-12-04T00:13:05.367Z"
+    },
+    {
+      "title": "Comprare rivista",
+      "priority": "media",
+      "completed": true,
+      "createdAt": "2023-12-03T23:41:39.259Z",
+      "id": 8,
+      "completedAt": "2023-12-04T00:13:04.877Z"
+    },
+    {
+      "title": "Comprare rivista\n",
+      "completed": true,
+      "createdAt": "2023-12-03T23:42:49.533Z",
+      "id": 9,
+      "edit": "2023-12-03T23:48:38.100Z",
+      "completedAt": "2023-12-04T00:13:04.125Z"
     }
   ]
 }
