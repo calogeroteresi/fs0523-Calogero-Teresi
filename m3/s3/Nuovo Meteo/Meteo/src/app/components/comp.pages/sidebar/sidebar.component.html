@@ -1,0 +1,52 @@
+<div class="flex flex-col items-center justify-center h-screen">
+  <app-form-search></app-form-search>
+  <h2 *ngIf="weatherDataArray[0]"> {{weatherDataArray[0].name}}</h2>
+  <div class="flex flex-col items-center space-y-6">
+    <img [src]="'https://openweathermap.org/img/wn/' + icon + '@2x.png'"
+         class="w-4/6" alt="Weather Image">
+
+    <span class="text-gray-300 font-semibold"></span>
+
+    <div class="flex flex-col items-center">
+      <p *ngIf="weatherDataArray[0]" class="text-8xl">{{ situation }}</p>
+      <p *ngIf="weatherDataArray[0]" class="text-4xl font-poppins">{{ temperatura | number: '1.0-0' }}&#8451;</p>
+    </div>
+  </div>
+
+  <div class="infoloc">
+    <p *ngIf="weather5day[0]">Population: {{weather5day[0].city.population}}</p>
+    <p *ngIf="weather5day[0]">Lan:{{weather5day[0].city.coord.lat}}°
+    Lon:{{weather5day[0].city.coord.lon}}°</p>
+    <div class="eff">
+        <div class="eff-sole">
+          <b>SOLE</b> - <span id="bi-eff-sole" *ngIf="weather5day[0]">
+            Sorge: {{weather5day[0].city.sunrise * 1000 | date: 'h:mm a'}}, Tramonta: {{weather5day[0].city.sunset * 1000 | date: 'h:mm a'}}
+        </span>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="divide-y divide-gray-300 space-y-8 px-4">
+    <div class="flex flex-row mt-6 items-center">
+      <span *ngIf="weatherDataArray[0]" class="font-semibold text-2xl">{{ currentDate | date: 'EEE' }},</span>
+      <span class="text-gray-300 ml-2 text-2xl">{{ currentDate | date: 'h:mm a' }}</span>
+      <p>
+      <span class="text-gray-300 ml-2 text-2xl">Last edit:{{ lastEdit | date: 'h:mm a' }}</span>
+    </p>
+    </div>
+
+    <div class="flex flex-col py-4 items-center">
+      <div class="flex md:flex-row">
+        <span class="p-4 text-xl font-semibold text-center"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <button class="btn btn-primary " (click)="addToFavourites()">Aggiungi ai preferiti</button>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="container position-relative">
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" >
+    <div class="input-group">
+      <input type="text" id="cityName" formControlName="cityName" class="form-control" placeholder="Enter city name">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+
+  <div class="position-absolute " *ngIf="recentSearches.length > 0">
+    <div >
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action" *ngIf="recentSearches.length === 0">No recent searches</li>
+        <a class="list-group-item list-group-item-action" *ngFor="let search of recentSearches" (click)="selectCity(search.lat, search.lon);currentWeather(search.lat, search.lon)">
+          <strong>{{ search.name }}</strong> - {{ search.state }} - {{ search.country }}
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>

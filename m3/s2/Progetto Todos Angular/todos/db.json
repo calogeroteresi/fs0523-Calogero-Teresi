@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "email": "mario@rossi.it",
+      "password": "$2a$10$J7eKkQ6mlr4nKWdH4kfhTeIgeCAacxiw3xp0VGJeiFTA9jaUE1ZvW",
+      "nome": "mario",
+      "id": 1
+    }
+  ]
+}

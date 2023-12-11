@@ -1,0 +1,73 @@
+<div class="container mt-2">
+  <div class="row">
+    <ng-container *ngIf="forecastsByDay && forecastsByDay.length > 0">
+      <div
+        *ngFor="let forecast of forecastsByDay"
+        class="col-md-2 mx-auto mb-3"
+      >
+        <div
+          (click)="showForecastsBySelectedDate(forecast.date)"
+          class="bg-dark p-2 rounded text-white text-center cursor-pointer"
+          [class.selected]="isForecastForSelectedDate(forecast.date)"
+        >
+          <h5 class="font-semibold text-md">
+            {{ forecast.date | date : "EEE, MMM d" }}
+          </h5>
+          <img
+            src="http://openweathermap.org/img/wn/{{
+              forecast.forecasts[0].weather[0].icon
+            }}@2x.png"
+            alt="Immagine"
+            class="w-full md:w-3/5 mx-auto"
+          />
+          <div class="flex flex-row justify-center">
+            <span class="text-md text-green-500"
+              >{{
+                forecast.details.maxTemperature | number : "1.0-0"
+              }}&#176;</span
+            >
+            <span class="text-gray-300 ml-1 text-md text-blue-500"
+              >{{
+                forecast.details.minTemperature | number : "1.0-0"
+              }}&#176;</span
+            >
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<!-- Continuazione del template app-small-forecast-card.component.html -->
+<div class="container mt-2">
+  <!-- ... -->
+  <div *ngIf="selectedDate" class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Time</th>
+          <th>Temperature (°C)</th>
+          <th>Description</th>
+          <th>Wind Speed (k/h)</th>
+          <th>Humidity (%)</th>
+          <th>Pressure (hPa)</th>
+          <th>Cloud Cover (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let forecast of forecastsByDay">
+          <ng-container *ngIf="isForecastForSelectedDate(forecast.date)">
+            <tr *ngFor="let singleForecast of forecast.forecasts">
+              <td>{{ singleForecast.dt_txt | date: 'h a' }}</td>
+              <td>{{ singleForecast.main.temp | number : "1.0-0" }}°</td>
+              <td>{{ singleForecast.weather[0].description }}</td>
+              <td>{{ singleForecast.wind.speed * 3.6 | number: '1.1-1' }}</td>
+              <td>{{ singleForecast.main.humidity }}%</td>
+              <td>{{ singleForecast.main.pressure }}</td>
+              <td>{{ singleForecast.clouds.all }}%</td>
+            </tr>
+          </ng-container>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

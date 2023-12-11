@@ -1,0 +1,7 @@
+<div>
+  <h3>Città preferite:</h3>
+  <ul *ngFor="let city of favourites">
+    <li (click)="navigateToOtherRoute(city.lat, city.lon)">{{ city.nome }}</li>
+  </ul>
+</div>
+

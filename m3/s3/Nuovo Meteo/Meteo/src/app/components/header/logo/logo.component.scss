@@ -1,0 +1,10 @@
+.app-logo {
+  width: 100%; /* Assicura che il logo riempia completamente il suo contenitore */
+  height: 100%; /* Assicura che il logo riempia completamente il suo contenitore */
+}
+
+.app-logo img {
+  width: 100%; /* Imposta la larghezza del logo al 100% del suo contenitore */
+  height: 100%; /* Imposta l'altezza del logo al 100% del suo contenitore */
+  object-fit: contain; /* Mantiene le proporzioni del logo all'interno del suo contenitore */
+}

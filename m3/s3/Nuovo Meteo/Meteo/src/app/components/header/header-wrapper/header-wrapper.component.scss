@@ -1,0 +1,10 @@
+.header-wrapper{
+  height: 10%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  background-color: purple;
+  .contLogo {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}

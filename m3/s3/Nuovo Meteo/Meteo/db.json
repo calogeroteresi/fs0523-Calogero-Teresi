@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "email": "mario@rossi.it",
+      "password": "$2a$10$J7eKkQ6mlr4nKWdH4kfhTeIgeCAacxiw3xp0VGJeiFTA9jaUE1ZvW",
+      "nome": "mario",
+      "id": 1
+    },
+    {
+      "email": "caloteresi@gmail.com",
+      "password": "$2a$10$Snj9sfVG4lQSp5G/SLvbkuYjwyM87o/TvbC8zJy6v3fQsFUOQVo6C",
+      "nome": "Calogero",
+      "id": 2
+    }
+  ],
+  "favourites": [
+    {
+      "userId": 2,
+      "nome": "Calenzana",
+      "lat": 42.5361,
+      "lon": 8.8734,
+      "cityId": 3029140,
+      "id": 1
+    }
+  ]
+}

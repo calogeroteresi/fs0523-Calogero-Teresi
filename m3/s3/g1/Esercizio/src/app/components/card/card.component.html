@@ -1,0 +1,19 @@
+<div class="container row ">
+<div *ngFor="let product of dataFromParent" class="card col-3">
+  <h4 class="title-card">{{product.title}}</h4>
+  <img class="card-img-top" src={{product.images[0]}} alt="Immagine Prodotto">
+  <div class="card-body">
+      <p class="card-text">{{product.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{product.brand}}</li>
+      <li class="list-group-item">{{product.price | currency:'EUR':'symbol':'1.2-2'}}</li>
+  </ul>
+  <div class="card-body">
+      <a class="card-link" href="details.html?id=123">Dettagli</a>
+      <a class="card-link" href="index-0.html">Modifica</a>
+  </div>
+</div>
+</div>
+
+
